@@ -1,6 +1,6 @@
 # cordova-plugin-compress
 
-## javascript
+
 
 ## HTML
 
@@ -53,7 +53,7 @@
 </body>
 
 ```
-
+## javascript
 ```js
 ImageCompress.setFile(
 {
