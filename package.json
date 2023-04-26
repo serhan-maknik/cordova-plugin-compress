@@ -1,0 +1,19 @@
+{
+  "name": "cordova.plugin.compress",
+  "version": "0.0.1",
+  "description": "Compress ",
+  "main": "www/index.js",
+  "types": "index.d.ts",
+  "cordova": {
+    "id": "cordova.plugin.compress",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "serhan maknik",
+  "license": "ISC"
+}
