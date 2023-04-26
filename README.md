@@ -27,11 +27,11 @@
             function onSuccess(imageData) {
                 ImageCompress.setFile(
                     {
-                        imageFile : imageData,
-                        fSize : 70,
-                        fQuality: 80,
-                        base64Size: 70,
-                        base64Quality:80 
+                        imageFile : imageData, // it should be file path not base64
+                        fSize : 70, // Orginal file size 
+                        fQuality: 80, // Orginal quality    
+                        base64Size: 70, // Base64 size
+                        base64Quality:80  // Base64 quality
                     },
                 function(imageData){
                    var image = document.getElementById('myImage');
