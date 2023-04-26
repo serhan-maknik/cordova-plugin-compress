@@ -63,9 +63,9 @@ ImageCompress.setFile(
     base64Size: 70,
     base64Quality:80 
 },
-function(base64){
+function(imageData){
 var image = document.getElementById('myImage');
-image.src = "data:image/jpeg;base64," + base64;
+image.src = "data:image/jpeg;base64," + imageData;
 },
 function(error){
 console.log(error)
