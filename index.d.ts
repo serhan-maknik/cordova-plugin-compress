@@ -1,12 +1,10 @@
-declare const ImageCompress:ImageCompress;
+declare const Compressor:Compressor;
 
 
-interface ImageCompress {
-    setFile(
-        data:any,
+interface Compressor {
+    compressImage(
+        path:string,
         successCallback:()=>void,
         errorCallback:()=>void,
     ):void,
-
-   
 }

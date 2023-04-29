@@ -1,11 +1,11 @@
 {
-  "name": "cordova.plugin.compress",
-  "version": "0.0.1",
-  "description": "Compress ",
+  "name": "cordova-plugin-compress",
+  "version": "1.0.0",
+  "description": "a cordova plugin for compressing image files",
   "main": "www/index.js",
   "types": "index.d.ts",
   "cordova": {
-    "id": "cordova.plugin.compress",
+    "id": "cordova-plugin-compress",
     "platforms": [
       "android"
     ]
