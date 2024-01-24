@@ -36,19 +36,18 @@ public class ImageCompress extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         this.callbackContext = callbackContext;
-        if (action.equals("file")) {
+        if (action.equals("compressImage")) {
             String message = args.getString(0);
           
             JSONObject jObj = new JSONObject(message);
-            String data = jObj.getString("data");
-            JSONObject jData = new JSONObject(data);
+           
             
-            this.fSize = jData.getInt("fSize");
-            this.fQuality = jData.getInt("fQuality");
-            this.base64Size = jData.getInt("base64Size");
-            this.base64Quality = jData.getInt("base64Quality");
+            this.fSize = jObj.getInt("fSize");
+            this.fQuality = jObj.getInt("fQuality");
+            this.base64Size = jObj.getInt("base64Size");
+            this.base64Quality = jObj.getInt("base64Quality");
 
-            String filePath = jData.getString("imageFile");
+            String filePath = jObj.getString("imageFile");
             String[] path = filePath.split("file:///");
 
             if(path.length>1){
