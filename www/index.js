@@ -2,11 +2,8 @@ const exec=require("cordova/exec");
 
 
 module.exports={
-    setFile:(data,successCallback,errorCallback)=>{
-        const obj={
-            data:data
-        };
-        exec(successCallback,errorCallback,"ImageCompress","file",[obj]);
+    compressImage:(options)=>{
+        const {onCompress,onFail}=options;
+        exec(onCompress,onFail,"Compressor","compressImage",[options]);
     },
-    
 }
