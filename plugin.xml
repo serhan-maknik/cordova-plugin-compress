@@ -8,13 +8,13 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
         <feature name="Compressor">
-            <param name="android-package" value="cordova.plugin.compress.ImageCompress" />
+            <param name="android-package" value="cordova.plugin.compress.Compressor" />
         </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"  />
         </config-file>
-        <source-file src="src/android/ImageCompress.java" target-dir="src/cordova/plugin/compress/ImageCompress" />
+        <source-file src="src/android/Compressor.java" target-dir="src/cordova/plugin/compress/Compressor" />
     </platform>
 
     <platform name="ios">
