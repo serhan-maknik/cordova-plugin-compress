@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class ImageCompress extends CordovaPlugin {
+public class Compressor extends CordovaPlugin {
    
     String base64;
     int fQuality = 80;
