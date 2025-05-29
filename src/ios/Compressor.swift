@@ -1,27 +1,28 @@
 import Foundation;
 
 
-class Compressor:CordovaPlugin {
+class Compressor:VritraPlugin {
 
     @objc(compressImage:)
     func compressImage(command:CDVInvokedUrlCommand){
         let options=command.arguments[0] as? [String:Any] ?? [:];
         if var path=options["path"] as? String {
+            if(path.starts(with:"file:///")){
+                path=String(path[path.index(path.startIndex,offsetBy:7)...]);
+            };
             let quality=(options["quality"] as? Double ?? 50 )/100;
             let overwrite=options["overwrite"] as? Bool ?? false;
             if let image=UIImage(contentsOfFile:path),
                 let data=image.jpegData(compressionQuality:quality){
                 var fileURL:URL?;
                 if(overwrite){
-                    if(!path.starts(with:"file:///")){path="file:///"+path};
-                    fileURL=URL(string:path);
+                    fileURL=URL(string:"file:///"+path);
                 }
                 else if let cacheURL=FileManager.default.urls(
                     for:.cachesDirectory,
                     in:.userDomainMask
                 ).first {
                     fileURL=cacheURL.appendingPathComponent("image.jpeg");
-                    
                 }
                 do{
                     if(fileURL != nil){

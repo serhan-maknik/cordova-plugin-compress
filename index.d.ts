@@ -18,12 +18,13 @@ interface Compressor {
         overwrite?:boolean,
         onCompress:(data:{
             /**
-             * The compress image file path.
+             * If overwrite is false, it points to the compressed image file path 
+             * else it's the same as the path option.
              */
             path:String,
             base64:String,
         })=>void,
-        onFail:(error:Error)=>void,
+        onFail?:(error:Error)=>void,
     },
     ):void,
 }
